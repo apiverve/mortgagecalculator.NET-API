@@ -72,14 +72,14 @@ public class data
     [JsonProperty("years")]
     public int years { get; set; }
 
+    [JsonProperty("total_interest_paid")]
+    public double totalinterestpaid { get; set; }
+
     [JsonProperty("monthly_payment")]
     public monthlypayment monthlypayment { get; set; }
 
     [JsonProperty("annual_payment")]
     public annualpayment annualpayment { get; set; }
-
-    [JsonProperty("total_interest_paid")]
-    public double totalinterestpaid { get; set; }
 
     [JsonProperty("amortization_schedule")]
     public amortizationschedule[] amortizationschedule { get; set; }

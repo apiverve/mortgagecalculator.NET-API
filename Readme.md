@@ -100,6 +100,7 @@ if(response.error != null) {
     "downpayment": 0,
     "rate": 6.8,
     "years": 30,
+    "total_interest_paid": 767750.49,
     "monthly_payment": {
       "total": 3715.97,
       "mortgage": 3715.97,
@@ -114,7 +115,6 @@ if(response.error != null) {
       "hoa": 0,
       "home_insurance": 0
     },
-    "total_interest_paid": 767750.49,
     "amortization_schedule": [
       {
         "month": 1,

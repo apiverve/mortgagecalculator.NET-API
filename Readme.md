@@ -70,7 +70,7 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```
-var queryOptions = new mortgagecalculatorQueryOptions {
+var queryOptions = new MortgageCalculatorQueryOptions {
   amount = 570000,
   rate = 6.8,
   years = 30
@@ -2277,7 +2277,8 @@ if(response.error != null) {
         "remaining_balance": 0
       }
     ]
-  }
+  },
+  "code": 200
 }
 ```
 

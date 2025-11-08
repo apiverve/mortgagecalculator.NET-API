@@ -5,12 +5,8 @@ using System.Text;
 namespace APIVerve
 {
     public class MortgageCalculatorQueryOptions {
-public number amount { get; set; }
-public number rate { get; set; }
-public integer years { get; set; }
-public number downpayment { get; set; }
-public number annual_propertytax { get; set; }
-public number annual_homeinsurance { get; set; }
-public number annual_hoa { get; set; }
+public int Amount { get; set; }
+public double Rate { get; set; }
+public int Years { get; set; }
 }
 }

@@ -4,102 +4,109 @@ using Newtonsoft.Json;
 
 namespace APIVerve
 {
-public class monthlypayment
-{
-    [JsonProperty("total")]
-    public double total { get; set; }
+    /// <summary>
+    /// Monthlypayment data
+    /// </summary>
+    public class Monthlypayment
+    {
+        [JsonProperty("total")]
+        public double Total { get; set; }
 
-    [JsonProperty("mortgage")]
-    public double mortgage { get; set; }
+        [JsonProperty("mortgage")]
+        public double Mortgage { get; set; }
 
-    [JsonProperty("property_tax")]
-    public int propertytax { get; set; }
+        [JsonProperty("property_tax")]
+        public int Propertytax { get; set; }
 
-    [JsonProperty("hoa")]
-    public int hoa { get; set; }
+        [JsonProperty("hoa")]
+        public int Hoa { get; set; }
 
-    [JsonProperty("home_insurance")]
-    public int homeinsurance { get; set; }
+        [JsonProperty("home_insurance")]
+        public int Homeinsurance { get; set; }
 
-}
+    }
+    /// <summary>
+    /// Annualpayment data
+    /// </summary>
+    public class Annualpayment
+    {
+        [JsonProperty("total")]
+        public double Total { get; set; }
 
-public class annualpayment
-{
-    [JsonProperty("total")]
-    public double total { get; set; }
+        [JsonProperty("mortgage")]
+        public double Mortgage { get; set; }
 
-    [JsonProperty("mortgage")]
-    public double mortgage { get; set; }
+        [JsonProperty("property_tax")]
+        public int Propertytax { get; set; }
 
-    [JsonProperty("property_tax")]
-    public int propertytax { get; set; }
+        [JsonProperty("hoa")]
+        public int Hoa { get; set; }
 
-    [JsonProperty("hoa")]
-    public int hoa { get; set; }
+        [JsonProperty("home_insurance")]
+        public int Homeinsurance { get; set; }
 
-    [JsonProperty("home_insurance")]
-    public int homeinsurance { get; set; }
+    }
+    /// <summary>
+    /// Amortizationschedule data
+    /// </summary>
+    public class Amortizationschedule
+    {
+        [JsonProperty("month")]
+        public int Month { get; set; }
 
-}
+        [JsonProperty("interest_payment")]
+        public int Interestpayment { get; set; }
 
-public class amortizationschedule
-{
-    [JsonProperty("month")]
-    public int month { get; set; }
+        [JsonProperty("principal_payment")]
+        public double Principalpayment { get; set; }
 
-    [JsonProperty("interest_payment")]
-    public int interestpayment { get; set; }
+        [JsonProperty("remaining_balance")]
+        public double Remainingbalance { get; set; }
 
-    [JsonProperty("principal_payment")]
-    public double principalpayment { get; set; }
+    }
+    /// <summary>
+    /// Data data
+    /// </summary>
+    public class Data
+    {
+        [JsonProperty("amount")]
+        public int Amount { get; set; }
 
-    [JsonProperty("remaining_balance")]
-    public double remainingbalance { get; set; }
+        [JsonProperty("downpayment")]
+        public int Downpayment { get; set; }
 
-}
+        [JsonProperty("rate")]
+        public double Rate { get; set; }
 
-public class data
-{
-    [JsonProperty("amount")]
-    public int amount { get; set; }
+        [JsonProperty("years")]
+        public int Years { get; set; }
 
-    [JsonProperty("downpayment")]
-    public int downpayment { get; set; }
+        [JsonProperty("total_interest_paid")]
+        public double Totalinterestpaid { get; set; }
 
-    [JsonProperty("rate")]
-    public double rate { get; set; }
+        [JsonProperty("monthly_payment")]
+        public Monthlypayment Monthlypayment { get; set; }
 
-    [JsonProperty("years")]
-    public int years { get; set; }
+        [JsonProperty("annual_payment")]
+        public Annualpayment Annualpayment { get; set; }
 
-    [JsonProperty("total_interest_paid")]
-    public double totalinterestpaid { get; set; }
+        [JsonProperty("amortization_schedule")]
+        public Amortizationschedule[] Amortizationschedule { get; set; }
 
-    [JsonProperty("monthly_payment")]
-    public monthlypayment monthlypayment { get; set; }
+    }
+    /// <summary>
+    /// API Response object
+    /// </summary>
+    public class ResponseObj
+    {
+        [JsonProperty("status")]
+        public string Status { get; set; }
 
-    [JsonProperty("annual_payment")]
-    public annualpayment annualpayment { get; set; }
+        [JsonProperty("error")]
+        public object Error { get; set; }
 
-    [JsonProperty("amortization_schedule")]
-    public amortizationschedule[] amortizationschedule { get; set; }
+        [JsonProperty("data")]
+        public Data Data { get; set; }
 
-}
-
-public class ResponseObj
-{
-    [JsonProperty("status")]
-    public string status { get; set; }
-
-    [JsonProperty("error")]
-    public object error { get; set; }
-
-    [JsonProperty("data")]
-    public data data { get; set; }
-
-    [JsonProperty("code")]
-    public int code { get; set; }
-
-}
-
+    }
 }
